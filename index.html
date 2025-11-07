@@ -238,7 +238,7 @@
            <p class="w">RGBA</p>
            </div>
         </div>  
-
+      
    
  <div class="contacto">
             <div class="box">
@@ -250,7 +250,35 @@
            <div class="box">
             <p class="w2" >Keywords</p>
            </div>
-        </div>  
+        </div> 
+        
+        <div class="form-amongus">
+    <h2>Formulario Among Us</h2>
+
+    <form>
+        <label>Nombre</label>
+        <input type="text" required>
+
+        <label>Correo</label>
+        <input type="email" required>
+
+        <label>Mensaje</label>
+        <textarea required></textarea>
+
+        <button class="btn-sus" type="submit">Enviar</button>
+    </form>
+</div>
+
+
+  <div class="caja animada">Animación</div>
+ 
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+ Este sitio utiliza cookies propias y de terceros para analizar el tráfico, mejorar tu experiencia de navegación y mostrar contenido personalizado. 
+        Puedes aceptar todas las cookies o revisar más información en nuestra política.    </p>
+    <button id="accept-cookies">Aceptar</button>
+</div>
+
 
     <div class="redes">
     <footer>
@@ -276,6 +304,18 @@
     <a href="#inicio" class="amongus" >
         <img src="amongus gif.gif" alt="Among Us">
     </a>
+// Verifica si ya aceptó cookies
+<script>
+    // Verifica si ya aceptó cookies
+if (!localStorage.getItem("cookies-aceptadas")) {
+    document.getElementById("cookie-banner").classList.remove("hidden");
+}
 
+document.getElementById("accept-cookies").addEventListener("click", function() {
+    localStorage.setItem("cookies-aceptadas", "true");
+    document.getElementById("cookie-banner").classList.add("hidden");
+});
+
+</script>
 </body>
 </html>
